@@ -1,10 +1,10 @@
 spring:
-  # ÅäÖÃredisÁ´½ÓµØÖ·
+  # é…ç½®redisé“¾æ¥åœ°å€
   redis:
     host: localhost
     password: iyu123456
     port: 6379
-    # jedisÁ¬½Ó³ØÅäÖÃ
+    # jedisè¿æ¥æ± é…ç½®
     jedis:
       pool:
         min-idle: 1
@@ -16,15 +16,15 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/db_concurrency
+      url: jdbc:mysql://localhost:3306/spike?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
       username: root
       password: iyu123456
       initial-size: 1
       min-idle: 1
       max-idle: 20
-      max-wait: 60000   #»ñÈ¡Á´½ÓµÄ×î´óµÈ´ı³¬Ê±Ê±¼ä
-      time-between-eviction-runs-millis: 60000  #¼ä¸ô¶à¾Ã½øĞĞÒ»´Î¼ì²â£¬¼ì²âĞèÒª¹Ø±ÕµÄ¿ÕÏĞµÄÁ´½Ó
-      min-evictable-idle-time-millis: 3000000   #Á´½ÓÔÚÁ¬½Ó³ØÖĞ×îĞ¡µÄÁ´½ÓÉú´æÊ±¼ä
+      max-wait: 60000   #è·å–é“¾æ¥çš„æœ€å¤§ç­‰å¾…è¶…æ—¶æ—¶é—´
+        time-between-eviction-runs-millis: 60000  #é—´éš”å¤šä¹…è¿›è¡Œä¸€æ¬¡æ£€æµ‹ï¼Œæ£€æµ‹éœ€è¦å…³é—­çš„ç©ºé—²çš„é“¾æ¥
+        min-evictable-idle-time-millis: 3000000   #é“¾æ¥åœ¨è¿æ¥æ± ä¸­æœ€å°çš„é“¾æ¥ç”Ÿå­˜æ—¶é—´
       validation-query: SELECT 'x'
       test-on-borrow: false
       test-on-return: false
